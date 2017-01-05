@@ -1,0 +1,6 @@
+name = TricomB2B Base Theme
+description = TricomB2B's base Drupal 7 theme. Includes a sexy gulp workflow utilizing Sass and so much more.
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = dist/css/main.css

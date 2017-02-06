@@ -1,7 +1,7 @@
 'use strict';
 
 // Proxy URL (optional)
-const proxyUrl = '';
+const proxyUrl = '*.dev';
 
 // paths to relevant directories
 const dirs = {
@@ -14,7 +14,7 @@ const sources = {
   js: `${dirs.src}/**/*.js`,
   scss: `${dirs.src}/**/*.scss`,
   coreScss: `${dirs.src}/scss/main.scss`,
-  img: `${dirs.src}/img/**/*.{png,jpg}`,
+  img: `./img/**/*.{png,jpg}`,
   font: [],
   jsVendor: [],
   cssVendor: []
@@ -25,19 +25,21 @@ const dests = {
   js: `${dirs.dest}/js`,
   css: `${dirs.dest}/css`,
   img: `${dirs.dest}/img`,
-  sigFile: `${dirs.src}/img/.tinypng-sigs`,
+  sigFile: `./img/.tinypng-sigs`,
   font: `${dirs.dest}/fonts`,
   vendor: `${dirs.dest}/vendors`
 };
+
+// API keys
+const TINYPNG_KEY = '';
 
 // plugins
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins';
 
-// constants
+// auto-load plugins
 const $ = gulpLoadPlugins();
-const TINYPNG_KEY       = 'g7BmBd0TIedcR5PDn1qd8wxzvuwrob2V';
 
 /****************************************
   Gulp Tasks
@@ -70,8 +72,17 @@ gulp.task('tinypng', tinypng());
 // Watch Files For Changes
 gulp.task('watch', watch());
 
-// // local task builds everything, opens up a standalone server, and watches for changes
+// default task builds src, opens up a proxy server, and watches for changes
 gulp.task('default', [
+  'fonts',
+  'styles',
+  'scripts',
+  'browser-sync-proxy',
+  'watch'
+]);
+
+// local task builds src, opens up a standalone server, and watches for changes
+gulp.task('local', [
   'fonts',
   'styles',
   'scripts',
@@ -79,7 +90,7 @@ gulp.task('default', [
   'watch'
 ]);
 
-// default task builds everything, opens up a proxy server, and watches for changes
+// proxy task builds src, opens up a proxy server, and watches for changes
 gulp.task('proxy', [
   'fonts',
   'styles',
@@ -178,7 +189,7 @@ function scripts () {
     return gulp.src(sources.js)
       .pipe($.plumber())
       .pipe($.sourcemaps.init())
-        .pipe($.concat('app.js'))
+        .pipe($.concat('main.js'))
         .pipe($.babel())
         .pipe(gulp.dest(dests.js))
         .pipe($.rename({suffix: '.min'}))
@@ -200,7 +211,7 @@ function styles () {
         .pipe($.cleanCss())
       .pipe($.sourcemaps.write('.'))
       .pipe(gulp.dest(dests.css))
-      .pipe(browserSync.stream({match: '**/*.css'}));
+      .pipe(browserSync.stream());
   };
 }
 

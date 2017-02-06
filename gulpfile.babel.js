@@ -2,6 +2,13 @@
 
 // Proxy URL (optional)
 const proxyUrl = '*.dev';
+// API keys
+const TINYPNG_KEY = '';
+// fonts
+const fonts = [];
+// vendors
+const jsVendors  = [];
+const cssVendors = [];
 
 // paths to relevant directories
 const dirs = {
@@ -15,9 +22,9 @@ const sources = {
   scss: `${dirs.src}/**/*.scss`,
   coreScss: `${dirs.src}/scss/main.scss`,
   img: `./img/**/*.{png,jpg}`,
-  font: [],
-  jsVendor: [],
-  cssVendor: []
+  font: fonts,
+  jsVendor: jsVendors,
+  cssVendor: cssVendors
 };
 
 // paths to file destinations
@@ -29,9 +36,6 @@ const dests = {
   font: `${dirs.dest}/fonts`,
   vendor: `${dirs.dest}/vendors`
 };
-
-// API keys
-const TINYPNG_KEY = '';
 
 // plugins
 import gulp from 'gulp';
@@ -72,12 +76,12 @@ gulp.task('tinypng', tinypng());
 // Watch Files For Changes
 gulp.task('watch', watch());
 
-// default task builds src, opens up a proxy server, and watches for changes
+// default task builds src, opens up a standalone server, and watches for changes
 gulp.task('default', [
   'fonts',
   'styles',
   'scripts',
-  'browser-sync-proxy',
+  'browser-sync-local',
   'watch'
 ]);
 
@@ -128,8 +132,7 @@ function browserSyncLocal () {
   return () => {
     browserSync.init({
       server: {
-        baseDir: './',
-        middleware: [ history() ]
+        baseDir: './'
       }
     });
   };
@@ -217,10 +220,10 @@ function styles () {
 
 function svg () {
   return () => {
-    return gulp.src('./src/img/icons/*.svg')
+    return gulp.src('./img/icons/*.svg')
       .pipe($.svgmin())
       .pipe($.svgstore())
-      .pipe(gulp.dest('./dist/img/icons'));
+      .pipe(gulp.dest('./img/icons'));
   };
 }
 

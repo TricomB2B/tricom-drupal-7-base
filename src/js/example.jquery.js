@@ -1,5 +1,5 @@
 /**
- * This file represents the template for building out vanilla javascript functionality. Simply
+ * This file represents the template for building out jQuery functionality. Simply
  * copy this file and rename to whatever the module is named (keep the .jquery.js filename,
  * so it's obvious which components are jquery based). Later it will be compiled
  * into the core javascript file and new components do not need to be added to the .info file.

@@ -1,0 +1,40 @@
+#admin-menu {
+  background: $theme-admin-menu-primary-bg !important;
+
+  li {
+    font-family: $admin-font;
+    font-size: modular-scale(0);
+  }
+
+  a {
+    color: $theme-admin-menu-font-color !important;
+    font-weight: 600;
+  }
+}
+
+ul.tabs.primary {
+  display: flex;
+  align-items: center;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 1em;
+    font-family: $admin-font;
+    font-size: modular-scale(-1);
+  }
+
+  a {
+    padding: 0.5em 2em;
+    @include border-top-radius(5px);
+    font-weight: 600;
+  }
+}
+
+ul.contextual-links li {
+  font-family: $admin-font;
+  font-size: modular-scale(0);
+  font-weight: 600;
+}

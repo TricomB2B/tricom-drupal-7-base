@@ -14,4 +14,19 @@
 @import "../../node_modules/normalize.css/normalize";
 
 // drupalize it
-@import "util/global";
+@import "settings";
+
+// utilitize it
+@import "util/functions";
+
+// stylize it
+@import "typography";
+@import "admin";
+@import "global";
+
+// regions
+@import "regions/header";
+@import "regions/footer";
+
+// blocks
+@import "blocks/main-menu";

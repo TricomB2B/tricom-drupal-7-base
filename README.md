@@ -86,6 +86,12 @@ settings[toggle_secondary_menu] = 1
 
 `regions`, `features`, and `settings` are all the default Drupal 7 values. These can be completely removed and it will not change the behavior of the theme. They are included here for completeness and ease of adjusting theme features, etc.
 
+## Template File
+
+The theme's `template.php` file also provides library-style functionality.
+
+- `tricom_get_url($path)` - Returns the fully qualified URL to the given path using the theme's path as the base. For example, calling `tricom_get_url('img/logo.svg')` would return `//DOMAIN/sites/all/themes/THEME/img/logo.svg`.
+
 ## Favicons
 
 Favicons can be generated at [RealFaviconGenerator](http://realfavicongenerator.net/) and can very easily be inserted (and replace) the default favicon using the [Responsive Favicons](https://www.drupal.org/project/responsive_favicons) module.

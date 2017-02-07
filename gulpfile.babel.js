@@ -131,9 +131,7 @@ gulp.task('images', [
 function browserSyncLocal () {
   return () => {
     browserSync.init({
-      server: {
-        baseDir: './'
-      }
+      server: '../../../../'
     });
   };
 }

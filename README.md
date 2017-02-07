@@ -213,18 +213,18 @@ There are a handful of settings you can modify in `gulpfile.babel.js`. These can
 const proxyUrl = '*.dev';
 // API keys
 const TINYPNG_KEY = '';
-// fonts
+// fontList
 const fonts = [];
 // vendors
-const jsVendors  = [];
-const cssVendors = [];
+const jsVendorList  = [];
+const cssVendorList = [];
 ```
 
 - **proxyUrl** - If you like to set up your local dev environment using vHosts, you can run BrowserSync and have it proxy a local URL. Use this variable for informing BrowserSync of this URL.
 - **TINYPNG_KEY** - This is your API key to interface with TinyPNG. You can sign up for a free account which gives you 500 free requests per month.
-- **fonts** - This is an array of any font files that will be required by the project. For the most part these will just be copied from the `src` directory over to the `dist` directory.
-- **jsVendors** - This is an array list of 3rd party JavaScript libraries. The list will be concatenated and minified and made available in `./dist/vendors`. If you are adding vendor libraries, be sure to include the `./dist/vendors/vendors.min.js` in your `.info` file.
-- **cssVendors** - Same as `jsVendors`, just for CSS libraries instead.
+- **fontList** - This is an array of any font files that will be required by the project. For the most part these will just be copied from the `src` directory over to the `dist` directory.
+- **jsVendorList** - This is an array list of 3rd party JavaScript libraries. The list will be concatenated and minified and made available in `./dist/vendors`. If you are adding vendor libraries, be sure to include the `./dist/vendors/vendors.min.js` in your `.info` file.
+- **cssVendorList** - Same as `jsVendors`, just for CSS libraries instead.
 
 #### Gulp Tasks
 

@@ -5,10 +5,10 @@ const proxyUrl = '*.dev';
 // API keys
 const TINYPNG_KEY = '';
 // fonts
-const fonts = [];
+const fontList = [];
 // vendors
-const jsVendors  = [];
-const cssVendors = [];
+const jsVendorList  = [];
+const cssVendorList = [];
 
 // paths to relevant directories
 const dirs = {
@@ -22,9 +22,9 @@ const sources = {
   scss: `${dirs.src}/**/*.scss`,
   coreScss: `${dirs.src}/scss/main.scss`,
   img: `./img/**/*.{png,jpg}`,
-  font: fonts,
-  jsVendor: jsVendors,
-  cssVendor: cssVendors
+  font: fontList,
+  jsVendor: jsVendorList,
+  cssVendor: cssVendorList
 };
 
 // paths to file destinations

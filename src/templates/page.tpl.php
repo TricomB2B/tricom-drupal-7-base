@@ -116,6 +116,10 @@
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
+
+        <div class="pill-box">
+          <div class="copy">Hello World!</div>
+        </div>
       </div> <!-- /.section, /#content -->
 
       <?php if ($page['sidebar_first']): ?>

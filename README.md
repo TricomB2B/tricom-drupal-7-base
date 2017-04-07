@@ -49,12 +49,14 @@ engine = phptemplate
 stylesheets[all][] = dist/css/main.min.css
 scripts[] = dist/js/main.min.js
 
-regions[header] = Header
-regions[highlighted] = Highlighted
-regions[help] = Help
+regions[nav] = Nav
+regions[subnav] = SubNav
+regions[top_nowrap] = Top NoWrap
 regions[content] = Content
-regions[sidebar_first] = Left sidebar
-regions[sidebar_second] = Right sidebar
+regions[bottom_nowrap] = Bottom NoWrap
+regions[sidebar_left] = Left sidebar
+regions[sidebar_right] = Right sidebar
+regions[footer_top] = Top Footer
 regions[footer] = Footer
 
 features[] = logo
@@ -105,6 +107,10 @@ For client logos, try to use SVG format. SVG is well-supported across modern bro
 For icons, also use SVGs, for many of the same reasons. Something like Font Awesome is nice, but is often fairly heavy-weight and if you only use a few glyphs, you've added a lot of CSS for very little value. [Entypo+](http://www.entypo.com/) is an SVG icon library I've often utilized.
 
 One thing to keep in mind is that for full SVG support you will need to provide both a width and height property in the CSS. Most browsers will handle automatically scaling one property or the other as necessary, but not all of them do. Providing a width and height will resolve most SVG sizing issues in certain browsers (Internet Explorer, hah).
+
+## Template Files
+
+Any Drupal 7 Theme requries at minimum of two template files, but due to the significant differences between the site and the front page, a separate template file is created to change the location of the headers and remove the hero image usage only on the front page. It allows greater flexibility in customizing that section as well while negating the need to use the configuration site information tab to designate what page shows first.
 
 ## Base Modules
 

@@ -82,14 +82,14 @@
           <img class="main-logo" src="<?php print tricom_get_url('img/logo.svg'); ?>" alt="<?php print t('Home'); ?>"/>
         </a>
       <?php endif; ?>
-
+      
       <?php print render($page['nav']); ?>
-
+      
       <?php if($page['subnav']): ?>
-      <div class="search-wrapper">
-      <?php print render($page['subnav']); ?>
-      </div>
-    <?php endif; ?>
+        <div class="search-wrapper">
+         <?php print render($page['subnav']); ?>
+        </div>
+      <?php endif; ?>
 
 
     </div> <!-- /#header -->
@@ -106,10 +106,7 @@
     <?php print $messages; ?>
 
     <div id="main-wrapper"><div id="main" class="clearfix">
-    <div class="hero light typography">
-         <h1><?php print $title; ?></h1> 
-
-      </div>
+    
     <?php if ($breadcrumb): ?>
           <div id="breadcrumb"><?php print $breadcrumb; ?></div>
         <?php endif; ?>
@@ -140,7 +137,7 @@
       <?php endif; ?>
 
     </div></div> <!-- /#main, /#main-wrapper -->
-
+    
     <?php if ($page['bottom_nowrap']): ?>
       <div id="bottom_nowrap">
         <?php print render($page['bottom_nowrap']); ?>

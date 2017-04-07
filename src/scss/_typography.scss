@@ -1,5 +1,9 @@
 /* =Typography
 ----------------------------------------------- */
+// typography - SPECIFIC TO IES
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
 // links
 a {
   text-decoration: none;
@@ -103,6 +107,10 @@ h6 {
   font-size: modular-scale(2);
   font-weight: 600;
   text-transform: uppercase;
+}
+
+button {
+  font-family: $button-font;
 }
 
 .no-margin {

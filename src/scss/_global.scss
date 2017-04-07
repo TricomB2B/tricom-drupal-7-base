@@ -15,14 +15,3 @@ body {
 
 // REMOVES THE STATEMENT ABOUT NO CONTENT
 #first-time { display: none; }
-
-button {
-  cursor: pointer;
-  color: color("white");
-  width: 60%;
-  padding: 5px 0;
-  background-color: color("red");
-  border: 2px outset color("red");
-  border-radius: 15px;
-  font-size: 1.5em;
-}

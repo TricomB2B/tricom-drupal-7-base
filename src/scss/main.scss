@@ -24,17 +24,13 @@
 @import "admin";
 @import "global";
 
-// typography - SPECIFIC TO IES
-@import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
-
 // blocks
 @import "blocks/main-menu";
 @import "blocks/video";
 
 // components
 @import "components/pill-box";
-@import "components/search-box";
+@import "components/buttons";
 
 // regions
 @import "regions/footer";

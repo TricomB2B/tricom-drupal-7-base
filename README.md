@@ -108,7 +108,7 @@ For icons, also use SVGs, for many of the same reasons. Something like Font Awes
 
 One thing to keep in mind is that for full SVG support you will need to provide both a width and height property in the CSS. Most browsers will handle automatically scaling one property or the other as necessary, but not all of them do. Providing a width and height will resolve most SVG sizing issues in certain browsers (Internet Explorer, hah).
 
-## Template Files
+## Templates
 
 Any Drupal 7 Theme requries at minimum of two template files, but due to the significant differences between the site and the front page, a separate template file is created to change the location of the headers and remove the hero image usage only on the front page. It allows greater flexibility in customizing that section as well while negating the need to use the configuration site information tab to designate what page shows first.
 

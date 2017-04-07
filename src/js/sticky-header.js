@@ -7,11 +7,12 @@
   'use strict';
 
   // Adding background color to header for scrolling
-  $(window).on("scroll", function(){
-        if($(window).scrollTop() > 100) {
-            $("#header").addClass("sticky");
-        } else {
-            $("#header").removeClass("sticky");
-        }
-    });
+  $(window).on('scroll', function(){
+    var topHeight = 100; 
+    if($(window).scrollTop() > topHeight) {
+      $('#header').addClass('sticky');
+    } else {
+      $('#header').removeClass('sticky');
+    }
+  });
 })(jQuery);

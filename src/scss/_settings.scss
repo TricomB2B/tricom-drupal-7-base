@@ -6,23 +6,28 @@ $theme-admin-menu-secondary-bg: #45454A;
 $theme-admin-menu-font-color: #fafafa;
 
 /**
- * COLOR MAP
+ * COLOR MAP - light and dark gray are wireframes
  */
 $colors: (
   "white": #fff,
   "black": #333333,
-  "red": #B30838
+  "red": #B30838,
+  "lightgray": #ddd,
+  "darkgray": #545454
 );
 
 /**
- * FONT IMPORTS AND SETTINGS
+ * FONT IMPORTS AND SETTINGS - all but admin font IES specific
  */
 
 $admin-font: $verdana;
-$body-font: $helvetica;
-$header-font: $helvetica;
+$body-font: "Lato";
+$header-font: "Lato";
+$button-font: "Open Sans Condensed", sans-serif;
 
 /**
  * GLOBAL SETTINGS
  */
-$bp-desktop: new-breakpoint(min-width 640px);
+$bp-tablet: new-breakpoint(min-width 768px);
+$bp-smdesktop: new-breakpoint(min-width 880px);
+$bp-desktop: new-breakpoint(min-width 1024px);

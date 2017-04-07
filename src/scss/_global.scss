@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 .hero {
   display: flex;
   align-items: center;
@@ -9,3 +12,6 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+// REMOVES THE STATEMENT ABOUT NO CONTENT
+#first-time { display: none; }

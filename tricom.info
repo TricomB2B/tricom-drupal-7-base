@@ -7,12 +7,14 @@ engine = phptemplate
 stylesheets[all][] = dist/css/main.min.css
 scripts[] = dist/js/main.min.js
 
-regions[header] = Header
-regions[highlighted] = Highlighted
-regions[help] = Help
+regions[nav] = Nav
+regions[subnav] = SubNav
+regions[top_nowrap] = Top NoWrap
 regions[content] = Content
-regions[sidebar_first] = Left sidebar
-regions[sidebar_second] = Right sidebar
+regions[bottom_nowrap] = Bottom NoWrap
+regions[sidebar_left] = Left sidebar
+regions[sidebar_right] = Right sidebar
+regions[footer_top] = Top Footer
 regions[footer] = Footer
 
 features[] = logo

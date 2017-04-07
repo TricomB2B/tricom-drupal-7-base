@@ -26,10 +26,15 @@
 
 // blocks
 @import "blocks/main-menu";
+@import "blocks/video";
 
 // components
 @import "components/pill-box";
+@import "components/buttons";
 
 // regions
 @import "regions/footer";
 @import "regions/header";
+@import "regions/top-nowrap";
+@import "regions/content";
+@import "regions/bottom-nowrap";

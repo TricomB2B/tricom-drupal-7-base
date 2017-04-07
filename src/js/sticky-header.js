@@ -7,13 +7,14 @@
   'use strict';
   
   var topHeight = 100; 
+  var $header = $('#header');
   // Adding background color to header for scrolling
   
   $(window).on('scroll', function(){  
     if($(window).scrollTop() > topHeight) {
-      $('#header').addClass('sticky');
+      $header.addClass('sticky');
     } else {
-      $('#header').removeClass('sticky');
+      $header.removeClass('sticky');
     }
   });
 })(jQuery);

@@ -31,4 +31,4 @@ function tricom_block_view_alter(&$data, $block) {*/
     /*if ($block->region == 'subnav' && isset($data['content']['search_block_form'])) {
       $data['content']['actions']['#attributes']['class'][] = 'submit-search';
     }
-}*/*/
+}*/

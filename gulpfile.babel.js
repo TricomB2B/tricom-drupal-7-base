@@ -1,7 +1,7 @@
 'use strict';
 
 // Proxy URL (optional)
-const proxyUrl = '*.dev';
+const proxyUrl = 'drupal.dev';
 // API keys
 const TINYPNG_KEY = '';
 // fonts

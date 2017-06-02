@@ -8,6 +8,19 @@ function tricom_get_url ($path) {
   return file_create_url(path_to_theme() . '/' . $path);
 }
 
+// add a standard viewport meta tag to the head of every document
+function tricom_preprocess_html (&$vars) {
+  $viewport = array(
+    '#tag'        => 'meta',
+    '#attributes' => array(
+      'name'    => 'viewport',
+      'content' => 'width=device-width,initial-scale=1.0',
+    )
+  );
+
+  drupal_add_html_head($viewport, 'viewport');
+}
+
 // search form functionality - TEMP COMMENTED OUT
 /*function tricom_form_alter(&$form, &$form_state, $form_id) {
     if ($form_id == 'search_block_form') {

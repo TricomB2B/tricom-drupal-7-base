@@ -20,7 +20,7 @@ $colors: (
  * FONT IMPORTS AND SETTINGS - all but admin font IES specific
  */
 
-$admin-font: $verdana;
+$admin-font: $font-stack-verdana;
 $body-font: "Lato";
 $header-font: "Lato";
 $button-font: "Open Sans Condensed", sans-serif;
@@ -28,6 +28,7 @@ $button-font: "Open Sans Condensed", sans-serif;
 /**
  * GLOBAL SETTINGS
  */
-$bp-tablet: new-breakpoint(min-width 768px);
-$bp-smdesktop: new-breakpoint(min-width 880px);
-$bp-desktop: new-breakpoint(min-width 1024px);
+$breakpoints: (
+  desktop-bp: 1024px,
+  mobile-bp: 420px
+);

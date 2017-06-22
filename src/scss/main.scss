@@ -9,11 +9,11 @@
 // bourbonize it
 @import "../../node_modules/bourbon/core/bourbon";
 
-// normalize it
-@import "../../node_modules/normalize.css/normalize";
-
 // drupalize it
 @import "settings";
+
+// normalize / sanitize it
+@import "sanitize";
 
 // utilitize it
 @import "util/functions";

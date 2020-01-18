@@ -125,14 +125,14 @@
       </div> <!-- /.section, /#content -->
 
       <?php if ($page['sidebar_left']): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_first']); ?>
+        <div id="sidebar-left" class="column sidebar"><div class="section">
+          <?php print render($page['sidebar_left']); ?>
         </div></div> <!-- /.section, /#sidebar-first -->
       <?php endif; ?>
 
       <?php if ($page['sidebar_right']): ?>
-        <div id="sidebar-second" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_second']); ?>
+        <div id="sidebar-right" class="column sidebar"><div class="section">
+          <?php print render($page['sidebar_right']); ?>
         </div></div> <!-- /.section, /#sidebar-second -->
       <?php endif; ?>
 

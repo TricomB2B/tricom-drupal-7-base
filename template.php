@@ -9,7 +9,7 @@ function tricom_get_url ($path) {
 }
 
 // add a standard viewport meta tag to the head of every document
-function tricom_preprocess_html (&$vars) {
+function tricom_drupal_7_base_preprocess_html (&$variables) {
   $viewport = array(
     '#tag'        => 'meta',
     '#attributes' => array(
@@ -19,6 +19,36 @@ function tricom_preprocess_html (&$vars) {
   );
 
   drupal_add_html_head($viewport, 'viewport');
+  /* Addin functionality for purpose of having Drupal recognize the use of sidebars - JM */
+
+	// Compile a list of classes that are going to be applied to the body element.
+
+	// This will remove all the current classes
+	$variables['classes_array'][3] = "";
+
+	// Sidebars added, none, one or both
+	if (!empty($variables['page']['sidebar_left']) && !empty($variables['page']['sidebar_right'])) {
+		$variables['classes_array'][] = 'two-sidebars';
+	}
+	elseif (!empty($variables['page']['sidebar_left'])) {
+		$variables['classes_array'][] = 'one-sidebar sidebar-left';
+	}
+	elseif (!empty($variables['page']['sidebar_right'])) {
+		$variables['classes_array'][] = 'one-sidebar sidebar-right';
+	}
+	else {
+		$variables['classes_array'][] = 'no-sidebars';
+	}
+
+	// Populates the body classes (It's Important!!)
+	if ($suggestions = theme_get_suggestions(arg(), 'page', '-')) {
+		foreach ($suggestions as $suggestion) {
+			if ($suggestion != 'page-front') {
+
+				$variables['classes_array'][] = drupal_html_class($suggestion);
+			}
+		}
+	}
 }
 
 // search form functionality - TEMP COMMENTED OUT
